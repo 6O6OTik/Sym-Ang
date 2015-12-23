@@ -1,0 +1,71 @@
+<form class="reg-form" data-ng-submit="regUserSub()" name="regForm">
+	<div class="container">
+		<div class="row">
+			<div class="page-header">
+				<h2>Please register </h2>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 ">
+				<div class="icon-block-head">
+					<p class="iconsHead">
+						<i class="fa fa-camera-retro fa-5x fa-pull-right" ></i>
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				<div class="input-form-group"
+					 data-ng-class="{'has-error' : regForm.email.$invalid && regForm.email.$dirty,
+					  				'has-success' : regForm.email.$valid && regForm.email.$dirty}">
+					<label  for="email" class="control-label">Email</label>
+					<input type="email"
+						   name="email"
+						   id="email"
+						   class="form-control"
+						   placeholder="Email address"
+						   data-ng-model="user.email"
+						   required >
+					<p class="help-block"
+					   data-ng-show="regForm.email.$invalid && regForm.email.$dirty && !regForm.email.$focused">
+						Неправильно введена почтовый адрес (Invalid e-mail)
+					</p>
+
+				</div>
+				<div class="input-form-group"
+					 data-ng-class="{'has-error' : regForm.password.$invalid && regForm.password.$dirty,
+					  				'has-success' : regForm.password.$valid && regForm.password.$dirty}">
+					<label for="password" class="control-label" >Password</label>
+					<input data-ng-model="user.password"
+						   type="password"
+						   name="password"
+						   id="password"
+						   class="form-control"
+						   placeholder="Password"
+						   required >
+				</div>
+				<div class="input-form-group">
+					<label >First name </label>
+					<input type="text"
+						   class="form-control"
+						   placeholder="Firts name"
+						   data-ng-model="user.firstName"
+						   required >
+				</div>
+				<br>
+				<div class="input-form-group">
+					<input class="btn  btn-primary btn-sm" type="submit" value="Registration"/>
+					<a href="#/login" class = "btn btn-default btn-sm " role="button" >Login</a>
+				</div>
+				<div class="input-form-group"> </div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				<p>test</p>
+				<pre>Email: {{user.email}}</pre>
+				<pre>Password: {{user.password}}</pre>
+				<pre>First name: {{user.firstName}}</pre>
+				<pre>{{regForm | json}}</pre>
+
+			</div>
+		</div>
+	</div>
+
+
+</form>

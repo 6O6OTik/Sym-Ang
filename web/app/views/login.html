@@ -1,0 +1,79 @@
+<form class="form-signin" name="logForm" data-ng-submit="loginSubmit()" >
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h2>Login form</h2>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="icon-block-head">
+                    <p class="iconsHead">
+                        <i class="fa fa-user-plus fa-5x fa-pull-right"></i>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="input-form-group"
+                     data-ng-class="{'has-error' : logForm.email_log.$invalid && logForm.email_log.$dirty,
+					  				'has-success' : logForm.email_log.$valid && logForm.email_log.$dirty}">
+
+                    <label for="user_log"  class="control-label"> User login: </label>
+                    <input class="form-control"
+                           type="text"
+                           name="user"
+                           id="user_log"
+                           placeholder="User name:"
+                           data-ng-model="user.username"
+
+                           required/>
+                    <p class="help-block"
+                       data-ng-show="logForm.email_log.$invalid && regForm.email_log.$dirty && !logForm.email_log.$focused">
+                        Неправильно введена почтовый адрес (Invalid e-mail)
+                    </p>
+                </div>
+
+                <div class="input-form-group"
+                     data-ng-class="{'has-error' : logForm.pass_log.$invalid && logForm.pass_log.$dirty,
+					  				'has-success' : logForm.pass_log.$valid && logForm.pass_log.$dirty}">
+
+                    <label for="pass"  class="control-label">  Password: </label>
+                    <input class="form-control"
+                           type="password"
+                           name="pass_log"
+                           id="pass"
+                           placeholder="User name:"
+                           data-ng-model="user.password"
+                           required/>
+                    <p class="help-block"
+                       data-ng-show="logForm.pass_log.$invalid && regForm.pass_log.$dirty && !logForm.pass_log.$focused">
+                        Неправильно введена почтовый адрес (Invalid e-mail)
+                    </p>
+                </div>
+                <br>
+                <div class="input-form-group">
+                    <button type="submit" class="btn btn-primary btn-sm" data-ng-click="login(user, logForm)">Save</button>
+                    <a href="#/registration" class = "btn btn-default btn-sm " role="button" >Registration</a>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div>Otvet:
+                    <p data-ng-bind="response.text"></p>
+                    <p data-ng-bind="response.password"></p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <br>
+                <pre>Password {{user.username}}</pre>
+                <pre>User: {{user.password}}</pre>
+                <pre>{{logForm | json}}</pre>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+
+
+
