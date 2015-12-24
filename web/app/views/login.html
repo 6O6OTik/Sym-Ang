@@ -1,74 +1,71 @@
-<form class="form-signin" name="logForm" data-ng-submit="loginSubmit()" >
-    <div class="container">
+<form name="logForm" data-ng-submit="login()" role="form">
+    <div class="form-group">
         <div class="row">
             <div class="page-header">
-                <h2>Login form</h2>
+                <h2 >Login form <i class="fa fa-user-plus fa-1x"></i></h2>
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                <div class="icon-block-head">
-                    <p class="iconsHead">
-                        <i class="fa fa-user-plus fa-5x fa-pull-right"></i>
-                    </p>
-                </div>
+        </div>
+    </div>
+    <div data-ng-show="error" class="alert alert-danger">{{error}}</div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-2 col-lg-2"></div>
+            <div class="col-sm-8 col-lg-8">
+                <label for="username">
+                    User login: <i class="fa fa-key"></i>
+                </label>
+                <input  type="text"
+                        class="form-control"
+                        name="user"
+                        id="username"
+                        placeholder="User name:"
+                        data-ng-model="username"
+                        required/>
+                <span data-ng-show="logForm.username.$dirty && logForm.username.$error.required" class="help-block">
+                    User is required
+                </span>
             </div>
-
-
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="input-form-group"
-                     data-ng-class="{'has-error' : logForm.email_log.$invalid && logForm.email_log.$dirty,
-					  				'has-success' : logForm.email_log.$valid && logForm.email_log.$dirty}">
-
-                    <label for="user_log"  class="control-label"> User login: </label>
-                    <input class="form-control"
-                           type="text"
-                           name="user"
-                           id="user_log"
-                           placeholder="User name:"
-                           data-ng-model="user.username"
-
-                           required/>
-                    <p class="help-block"
-                       data-ng-show="logForm.email_log.$invalid && regForm.email_log.$dirty && !logForm.email_log.$focused">
-                        Неправильно введена почтовый адрес (Invalid e-mail)
-                    </p>
-                </div>
-
-                <div class="input-form-group"
-                     data-ng-class="{'has-error' : logForm.pass_log.$invalid && logForm.pass_log.$dirty,
-					  				'has-success' : logForm.pass_log.$valid && logForm.pass_log.$dirty}">
-
-                    <label for="pass"  class="control-label">  Password: </label>
-                    <input class="form-control"
-                           type="password"
-                           name="pass_log"
-                           id="pass"
-                           placeholder="User name:"
-                           data-ng-model="user.password"
-                           required/>
-                    <p class="help-block"
-                       data-ng-show="logForm.pass_log.$invalid && regForm.pass_log.$dirty && !logForm.pass_log.$focused">
-                        Неправильно введена почтовый адрес (Invalid e-mail)
-                    </p>
-                </div>
-                <br>
-                <div class="input-form-group">
-                    <button type="submit" class="btn btn-primary btn-sm" data-ng-click="login(user, logForm)">Save</button>
-                    <a href="#/registration" class = "btn btn-default btn-sm " role="button" >Registration</a>
-                </div>
+            <div class="col-sm-2 col-lg-2"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-2 col-lg-2"></div>
+            <div class="col-sm-8 col-lg-8">
+                <label for="password">  Password: </label>
+                <i class="fa fa-lock"></i>
+                <input class="form-control"
+                       type="password"
+                       name="password"
+                       id="password"
+                       placeholder="User name:"
+                       data-ng-model="password"
+                       required/>
+                 <span data-ng-show="logForm.password.$dirty && logForm.password.$error.required" class="help-block">
+                    User is required
+                </span>
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                <div>Otvet:
-                    <p data-ng-bind="response.text"></p>
-                    <p data-ng-bind="response.password"></p>
-                </div>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <br>
-                <pre>Password {{user.username}}</pre>
-                <pre>User: {{user.password}}</pre>
-                <pre>{{logForm | json}}</pre>
-            </div>
+            <div class="col-sm-2 col-lg-2"></div>
+        </div>
+    </div>
+    <div class="form-actions">
+        <div class="row">
+            <div class="col-sm-2 col-lg-2"></div>
 
+            <div class="col-sm-8 col-lg-8">
+                <button type="submit" class="btn btn-primary btn-sm" data-ng-disabled="logForm.$invalid  || dataLoading">Save</button>
+                <i data-ng-if="dataLoading" class="fa fa-spinner fa-pulse "  style="color:green"></i>
+                <a href="/registration" class = "btn btn-default btn-sm " role="button" >Registration</a>
+            </div>
+            <div class="col-sm-2 col-lg-2"></div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6 col-lg-6">
+
+            </div>
+            <div class="col-sm-6 col-lg-6"></div>
         </div>
     </div>
 

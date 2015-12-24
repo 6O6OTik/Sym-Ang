@@ -9,13 +9,16 @@ use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\User;
 
 
-
-
 class DefaultController extends Controller
 {
 
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homePage")
+     * @Route("/home", name="homeName")
+     * @Route("/login", name="loginNamePage")
+     * @Route("/registration", name="regNamePage")
+     * @Route("/tableInfo", name="tableInfoNamePage")
+     * @Route("/user", name="userNamePage")
      */
     public function indexAction(Request $request)
     {
@@ -29,7 +32,7 @@ class DefaultController extends Controller
      * @Route("/show", name="show")
      */
 
-    public function showAction ()
+    public function showAction (Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $products = $em->getRepository('AppBundle:User')->findAll();
@@ -57,6 +60,8 @@ class DefaultController extends Controller
     public function deleteAction (Request $request)
     {
         if ($_SERVER["REQUEST_METHOD"] == "DELETE"){
+
+
            $userId =  $request->get('userId');
 
             $em = $this->getDoctrine()->getManager();
@@ -85,18 +90,21 @@ class DefaultController extends Controller
     public function addAction (Request $request)
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+            $data = json_decode($request->getContent(),true);
+            $name = $data['userName'];
+            $age = $data['userAge'];
             $user = new User();
-            $user->setName( $request->get('userName'));
-            $user->setAge($request->get('userAge'));
+
+            $user->setName($name);
+            $user->setAge($age);
 
             $em = $this->getDoctrine()->getEntityManager();
             $em->persist($user);
             $em->flush();
             $id = $user->getId();
 
-            
-            return new Response( json_encode(array('userId' => $id )));
+
+            return new Response( json_encode(array('userId' => $id)));
         }
     }
 
@@ -106,30 +114,37 @@ class DefaultController extends Controller
 
     public function editAction (Request $request)
     {
-        if ($_SERVER["REQUEST_METHOD"] == "PUT") {
-
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $data = json_decode($request->getContent(),true);
 
             $em = $this->getDoctrine()->getManager();
-            $user = $em->getRepository('AppBundle:User')->find($request->get('userId'));
+            $user = $em->getRepository('AppBundle:User')->find($request->get('userId', 'userName'));
 
             if (!$user) {
                 throw $this->createNotFoundException(
-                    'No user found'
+                    'No user found id'
                 );
             }
 
-            $user->setName($request->get('userName'));
-            $user->setAge($request->get('userAge'));
+            $user->setName($data['userName']);
+            $user->setAge($data['userAge']);
             $em->flush();
 
-            
-        
         }
 
         return new Response( json_encode(
                 array('success' => 'Success' )
+
                 )
             );
     }
 
 }
+
+
+
+
+
+
+
+

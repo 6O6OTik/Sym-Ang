@@ -7,7 +7,7 @@ $(function(){
 
     $.ajax({
         method: "GET",
-        url: "/web/app_dev.php/show"
+        url: "/show"
     })
         .done(function( data,response ) {
             for (var i = 0; i< data.length;i++)  {
@@ -27,7 +27,7 @@ $(function(){
 
 function addRow(id, name, age){
     $.ajax({
-        url: '/web/app_dev.php/add',
+        url: '/add',
         type: 'POST',
         data: {'userName': name, 'userAge': age},
         success: function(result) {
@@ -50,7 +50,7 @@ function addRow(id, name, age){
  function deleteRow(id){
 
      $.ajax({
-         url: '/web/app_dev.php/delete',
+         url: '/delete',
          type: 'DELETE',
          data: {'userId': id},
          success: function(result) {
@@ -87,7 +87,7 @@ function updateUser(event){
     console.log(age);
 
     $.ajax({
-        url: '/web/app_dev.php/edit',
+        url: '/edit',
         type: 'PUT',
         data: {
             'userId': id,

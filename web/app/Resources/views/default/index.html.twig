@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Welcome!</title>
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <link href="{{ asset('bundles/app/lib/bootstrap/dist/css/bootstrap.css') }}" type="text/css" rel="stylesheet"/>
+        <link href="{{ asset('bundles/app/css/style.css') }}" type="text/css" rel="stylesheet"/>
+        <link href="{{ asset('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') }}" type="text/css"
+              rel="stylesheet"/>
+
+    </head>
+    <body  data-ng-app="prApp">
+    <div class="menu-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="row">
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-4"></div>
+                <div class="col-xs-11 col-sm-10 col-md-8 col-lg-8 ">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                            <span class="sr-only">Открыть навигацию</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" >Reimoss</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="responsive-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="{active:isActive('/')}"><a href="#/home">Home</a></li>
+                            <li class="{active:isActive('/login')}"><a href="#/login">Sing in</a></li>
+                            <li class="{active:isActive('/registration')}"><a href="#/registration">Sing up</a></li>
+                            <li class="{active:isActive('/tableInfo')}"><a href="#/tableInfo">Information user</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs- col-sm-0 col-md-2 col-lg-0 "></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div data-ng-view=""></div>
+    </div>
+
+    <div class="footer">
+            <div class="row footer_fix">
+                <div class="col-xs-0 col-sm-1 col-md-1 col-lg-1 "></div>
+                <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                    <br>
+                    <p>&copy; Copyright 2015
+                        Reimoss &trade;</p>
+                </div>
+                <div class="col-xs-0 col-sm-1 col-md-3 col-lg-3 "></div>
+                <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4">
+                    <div class="list">
+                        <h4>Feedback:</h4>
+                        <section>
+                            <a href="#" title="Like us!">
+                                <i class="fa fa-facebook fa-2x"></i>
+                            </a>
+                            <a href="#" title="Tweet us!">
+                                <i class="fa fa-twitter fa-2x"></i>
+                            </a>
+                            <a href="#" title="Connect wih us!">
+                                <i class="fa fa-vk fa-2x"></i>
+                            </a>
+                            <a href="#" title="Code with us!">
+                                <i class="fa fa-git fa-2x"></i>
+                            </a>
+                            <a href="mailto:xx@xx.com" title="Mail us!">
+                                <i class="fa fa-envelope-o fa-2x"></i>
+                            </a>
+                            <a href="mailto:xx@xx.com" title="Skype us!">
+                                <i class="fa fa-skype fa-2x"></i>
+                            </a>
+                        </section>
+                    </div>
+
+                </div>
+                <div class="col-xs-0 col-sm-1 col-md-1 col-lg-1 "></div>
+
+        </div>
+    </div>
+
+    <script src="{{ asset('bundles/app/scripts/js/jquery-1.11.3.js') }}" type="text/javascript"></script>
+    {#<script src="{{ asset('js/bootstrap.js') }}" type="text/javascript"></script>#}
+
+    {#<script src="{{ asset('bundles/app/lib/jquery.dist/jquery.js') }}" type="text/javascript"></script>#}
+    <script src="{{ asset('bundles/app/lib/angular/angular.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('bundles/app/lib/angular-animate/angular-animate.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/angular-bootstrap/ui-bootstrap-tpls.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/angular-cookies/angular-cookies.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/angular-resource/angular-resource.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/angular-route/angular-route.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/angular-sanitize/angular-sanitize.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/angular-touch/angular-touch.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/bootstrap/dist/js/bootstrap.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('bundles/app/lib/angular-auto-validate/dist/jcs-auto-validate.min.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('bundles/app/scripts/js/main.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/scripts/app.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/scripts/controllers/tableInfo.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/scripts/controllers/pageUserCtrl.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/scripts/controllers/loginCtrl.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/scripts/controllers/registration.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/app/lib/parsleyjs/dist/parsley.min.js') }}" type="text/javascript"></script>
+    {#<script src="{{ asset('bundles/app/scripts/controllers/navbarCtrl.js') }}" type="text/javascript"></script>#}
+    {#<script src="{{ asset('bundles/app/scripts/directives/navbarDir.js') }}" type="text/javascript"></script>#}
+    {#<script src="{{ asset('bundles/app/scripts/directives/navigationT.js') }}" type="text/javascript"></script>#}
+
+
+    </body>
+</html>

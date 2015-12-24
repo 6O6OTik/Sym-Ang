@@ -2,15 +2,10 @@
  {% block stylesheets %}
 
      <style type="text/css">
-         body {
-             padding-top: 140px;
-             padding-bottom: 40px;
-             background-color: #c9e1ee;
-         }
+
          .form-signin {
              max-width: 300px;
              padding: 19px 29px 29px;
-             margin: 0 auto 20px;
              background-color: #ffffff;
              border: 3px solid #e5e5e5;
              -webkit-border-radius: 5px;
@@ -37,17 +32,15 @@
   {% block container %}
 
       <div class="container" >
-          <form action="" class="form-signin" method="POST" action="{{ path('login') }}">
-              <h2 class="form-signin-heading">Plase sing</h2>
-              <input type="text" name="username" placeholder="Email">
+          <form  class="form-signin" method="POST" action="{{ path('login_sin') }}">
+              <h2 class="form-signin-heading">Join </h2>
+              <input type="text" name="username" placeholder="User name">
+              <input type="text" name="email" placeholder="Email">
               <input type="password" name="password" class="input-block-level" placeholder="Password">
-              <button class="btn btn-large btn-primary" type="submit">Sing in</button>
+              <button class="btn btn-large btn-primary " type="submit">Registration</button> &nbsp;&nbsp;
+              <a class="login_a" href="{{ path('login') }}">Sing in</a>
           </form>
 
       </div>
-      {% if username is defined %}
-          <div class="alert-info fade in">
-              <strong>hello {{ username }}</strong>
-          </div>
-      {% endif %}
+
   {% endblock %}

@@ -1,19 +1,28 @@
 'use strict';
 
 angular.module('prApp')
-    .controller('loginCtrl', ['$scope', '$http', function ($scope, $http) {
-        //$http.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
-        //$http.defaults.headers.common['Accept']  = 'application/json; charset=utf-8';
-        //$scope.response = {};
-        //$scope.login = function (user, logForm) {
-        //    if (logForm.$valid) {
-        //        console.log(user);
-        //        $http.post('http://symfonyapi.dev/web/app_dev.php/auth/log', user).
-        //            success(function (user) {
-        //
-        //            });
-        //    }
-        //};
+    .controller('loginCtrl',
+    ['$scope','$rootScope','$location', 'loginService',
+    function ($scope,$rootScope, $location,loginService) {
+
+        loginService.ClearCredentials();
+
+        $scope.login = function(){
+            $scope.dataLoading = true;
+            loginService.Login($scope.username, $scope.password, function(response){
+                if(response.success){
+                    loginService.SetCredentials($scope.username, $scope.password);
+                    $location.path('/user');
+                    console.log($scope.username, $scope.password)
+                } else {
+                    $scope.error = response.message;
+                    $scope.dataLoading = false;
+                }
+            });
+
+
+        };
+
 
     }]);
 

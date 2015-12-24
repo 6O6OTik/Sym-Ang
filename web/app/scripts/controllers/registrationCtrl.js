@@ -1,11 +1,26 @@
 'use strict';
 
-//angular.module('prApp')
-//    .controller('registrationCtrl',['$scope','$http', function ($scope, $http) {
-//        $http.defaults.headers.common['Content-Type'] = 'application/json; charset=utf-8';
-//        $http.defaults.headers.common['Accept'] = 'application/json; charset=utf-8';
-//
-//
-//}]);
-//
+angular.module('prApp')
+    .controller('registrationCtrl',
+    ['$scope','$rootScope', '$location', 'registrationService',
+        function ($scope, rootScope, $location, registrationService){
+
+            registrationService.ClearCredentials();
+
+            $scope.regUserSub = function(){
+                $scope.dataLoading = true;
+                registrationService.Registration($scope.username,$scope.password, $scope.email, function(response){
+                    if(response.success){
+                        $location.path('/login');
+
+                    } else {
+                        $scope.error = response.message;
+                        $scope.dataLoading = false;
+                    }
+                });
+            }
+        }
+    ]
+);
+
 

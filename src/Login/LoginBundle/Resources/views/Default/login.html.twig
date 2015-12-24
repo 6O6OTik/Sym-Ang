@@ -1,21 +1,52 @@
+{% extends "LoginLoginBundle:Default:index.html.twig" %}
+  {% block stylesheets %}
 
+      <style type="text/css">
 
-<form method="POST" action="{{path('login_login')}}" class="form-horizontal">
-    <div style="background-color: rgba(129, 124, 126, 0.4)">
-        <p>Login form</p>
-        <div>
-            <label> User name:  </label>
-            <input type="text" name="username">
-            <br>
-            <label> User password:  </label>
-            <input type="password" name="password">
-            <br>
-            <button type="submit" value="login in" >Sing in</button>
-            <a href="{{path('login_login_signup')}}">Sing Up</a>
-        </div>
+          .form-signin {
+              max-width: 300px;
+              padding: 19px 29px 29px;
+              background-color: #ffffff;
+              border: 3px solid #e5e5e5;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              border-radius: 5px;
+              -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+              -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          }
+
+          .form-signim .form-signin-heading {
+              margin-bottom: 10px;
+          }
+          .form-signin input[type="text"],
+          .form-signin input[type="password"] {
+              font-size: 16px;
+              height: auto;
+              margin-bottom: 15px;
+              padding: 7px 8px;
+          }
+
+      </style>
+  {% endblock %}
+  {% block container %}
+
+    <div class="container" >
+        <form  class="form-signin" method="POST" action="{{ path('login') }}" >
+            <h2 class="form-signin-heading">Sing in</h2>
+            <input type="text" name="username" placeholder="User address.." >
+            <input type="password" name="password" placeholder="Password...">
+            <label for="" class="checkbox">
+                <input type="checkbox" name="remember" value="remember-me">Remember me
+            </label>
+            <button class="btn btn-large btn-primary" type="submit">Sing in</button>&nbsp;&nbsp;
+            <a href="{{ path('login_sin') }}">Sing Up</a>
+        </form>
+
     </div>
-</form>
-
-
-
-<strong>hello {{name}}</strong>
+    {% if username is defined %}
+    <div class="alert-info fade in">
+        <strong>hello {{ username }}</strong>
+    </div>
+{% endif %}
+{% endblock %}

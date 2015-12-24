@@ -11,31 +11,29 @@ angular
         'ui.bootstrap',
         'ngTouch'
     ])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider)  {
+
         $routeProvider
 
             .when('/home', {
-                templateUrl: 'bundles/app/views/home.html'
+                templateUrl: 'app/views/home.html'
             })
             .when('/login', {
-                templateUrl: 'bundles/app/views/login.html',
+                templateUrl: 'app/views/login.html',
                 controller: 'loginCtrl'
             })
 
             .when('/registration', {
-                templateUrl: 'bundles/app/views/registration.html',
+                templateUrl: 'app/views/registration.html',
                 controller: 'registrationCtrl'
             })
-            //.when('/reg', {
-            //    templateUrl: 'bundles/app/views/reg.html'
-            //    //controller: 'RegistrationController'
-            //})
+
             .when('/tableInfo', {
-                templateUrl: 'bundles/app/views/tableInfo.html',
+                templateUrl: 'app/views/tableInfo.html',
                 controller: 'tableCtrl'
             })
             .when('/user', {
-                templateUrl: 'bundles/app/views/user.html',
+                templateUrl: 'app/views/user.html',
                 controller: 'usersCtrl'
             })
 
@@ -43,5 +41,24 @@ angular
             .otherwise({
                 redirectTo: '/home'
             });
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
+        //$locationProvider.hashPrefix('!');
+    })
+    .run(['$rootScope', '$location', '$cookieStore', '$http',
+        function ($rootScope, $location, $cookieStore, $http) {
+                     $rootScope.globals = $cookieStore.get('globals') || {};
+            if ($rootScope.globals.currentUser) {
+                $http.defaults.headers.common['prApp'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+            }
 
-    });
+            //$rootScope.$on('$locationChangeStart', function (event, next, current) {
+            //    // redirect to login page if not logged in
+            //    if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+            //        $location.path('/login');
+            //    }
+            //});
+        }]);
+

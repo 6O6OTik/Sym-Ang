@@ -3,25 +3,39 @@
 namespace Login\LoginBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Login\LoginBundle\Entity\Users;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-//use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 class AuthController extends Controller
 {
+    /**
+     * @Route("/", name="blog_home_index" )
+     */
+    public function indexAction(Request $request)
+    {
+        // replace this example code with whatever you need
+        return $this->render('LoginLoginBundle:Default:index.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
+    }
+
+
 
     /**
-     * @Route("/log")
+     * @Route("/log", name="login")
      */
     public function LoginAction(Request $request)
     {
-        if ($request->getMethod()=='POST') {
-            $username = $request->get('username');
-            $password = $request->get('password');
+        if ($request->getMethod() == 'POST') {
+            $data = json_decode($request->getContent(),true);
+            $username = $data['username'];
+            $password = $data['password'];
 
             $em = $this->getDoctrine()->getEntityManager();
             $repository = $em->getRepository('LoginLoginBundle:Users');
@@ -29,37 +43,34 @@ class AuthController extends Controller
             $user = $repository->findOneBy(array('username' => $username, 'password' => $password));
 
             if ($user) {
-                return $this->render('LoginLoginBundle:Auth:login.html.php',
-                    array(
-                    'username' => $username,
-                    'password' => $password
-                    ));
+                return new JsonResponse([
+                    'username' => $user->getUserName(),
+                    'success' => true
+
+                ]);
+                //return $this->render('LoginLoginBundle:Default:welcome.html.twig', array('username' => $user->getUsername()));
+            } else {
+                throw new NotFoundHttpException("User not found.");
+//                return new JsonResponse([
+//                    'username' => 'error'
+//                ]);
+//                return $this->render('LoginLoginBundle:Default:login.html.twig', array('username' => 'Login error'));
             }
-
-        } else {
-            return $this->render('LoginLoginBundle:Auth:login.html.php',
-                array(
-                    'username' => 'error login failed',
-                    'password' => 'error password failed'
-                ));
         }
-
-//        получения значения с полей
-
-//        return $this->render('LoginLoginBundle:Auth:login.html.php');
-
+        return $this->render('LoginLoginBundle:Default:login.html.twig');
     }
 
+
     /**
-     * @Route("/reg")
+     * @Route("/reg", name="login_sin" )
      */
-    public function singnupAction(Request $request)
+    public function RegAction(Request $request)
     {
         if ($request->getMethod() == 'POST') {
-
-            $username = $request->get('username');
-            $password = $request->get('pass');
-            $email = $request->get('email');
+            $data = json_decode($request->getContent(),true);
+            $username = $data['username'];
+            $password = $data['password'];
+            $email = $data['email'];
 
             $user = new Users();
             $user->setUsername($username);
@@ -70,9 +81,25 @@ class AuthController extends Controller
             $em->flush();
 
         }
-
-        return $this->render('LoginLoginBundle:Auth:singnup.html.php');
+        if ($user) {
+            return new JsonResponse([
+                'username' => $user ->getUsername(),
+                'success' => true
+            ]);
+        } else {
+            throw new NotFoundHttpException("Problem");
+        }
+//        return $this->render('LoginLoginBundle:Default:registration.html.twig');
     }
+
+    /**
+     * @Route("/reg", name="login_logout" )
+     */
+    public function LogoutAction(Request $request){
+
+    return $this->render('LoginLoginBundle:Default:index.html.twig');
+}
+
 
 
 }
