@@ -51,7 +51,6 @@ angular.module('prApp')
                 });
                 modalInstance.result.then(function (item) {
                     $scope.items.push(angular.copy(item));
-                    console.log($scope.items);
                 })
 
             };
@@ -86,7 +85,7 @@ angular.module('prApp')
                 $scope.items.splice(index, 1);
                 $modalInstance.close();
 
-                //console.log($scope.item);
+
 
             };
             $scope.cancel = function () {
@@ -95,7 +94,8 @@ angular.module('prApp')
             };
         }
     ])
-    .controller('nUserModalInstanceCtr', function ($scope, TableService, $modalInstance) {
+    .controller('nUserModalInstanceCtr', ['$scope', 'TableService','$modalInstance',
+        function ($scope, TableService, $modalInstance) {
 
         $scope.eAddEnd = function () {
             TableService.userTableAdd.addUserTable({
@@ -110,4 +110,5 @@ angular.module('prApp')
             console.log('ng-click = cancel');
             $modalInstance.dismiss('cancel');
         };
-    });
+    }]
+);

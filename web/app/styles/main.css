@@ -20,7 +20,10 @@ body {
 html,body {
   height: 100%;
 }
-
+.container .index {
+  min-height: 100%;
+  margin-bottom: -142px;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

@@ -1,8 +1,8 @@
 <form name="logForm" data-ng-submit="login()" role="form">
-    <div class="form-group">
+    <div class="form-group" >
         <div class="row">
             <div class="page-header">
-                <h2 >Login form <i class="fa fa-user-plus fa-1x"></i></h2>
+                <h2 class="header_global">Login form <i class="fa fa-user-plus fa-1x"></i></h2>
             </div>
         </div>
     </div>
@@ -16,6 +16,7 @@
                 </label>
                 <input  type="text"
                         class="form-control"
+
                         name="user"
                         id="username"
                         placeholder="User name:"
@@ -41,9 +42,9 @@
                        placeholder="User name:"
                        data-ng-model="password"
                        required/>
-                 <span data-ng-show="logForm.password.$dirty && logForm.password.$error.required" class="help-block">
-                    User is required
-                </span>
+                 <!--<span data-ng-show="logForm.password.$dirty && logForm.password.$error.required" class="help-block">-->
+                    <!--User is required-->
+                <!--</span>-->
             </div>
             <div class="col-sm-2 col-lg-2"></div>
         </div>

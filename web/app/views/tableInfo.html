@@ -1,167 +1,137 @@
 <form class="form-control">
-    <div class="container">
-        <div class="row">
-            <div class="page-header">
-                <h2>Information about the user <i class="fa fa-bookmark-o fa-sm"></i></h2>
-            </div>
-            <div class="col-xs-12 col-sm-11 col-md-11  col-lg-11 ">
-                <div class="row">
-                    <div class="col-xs-9 col-sm-9 col-md-9  col-lg-9 ">
-                        <table class="table">
-                            <caption></caption>
-                            <thead>
-                            <tr>
-
-                                <th>Name</th>
-                                <th>Age</th>
-                                <th>Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr data-ng-repeat="item in items">
-                                <td id="userName" >{{item.name}}</td>
-                                <td id="userAge">{{item.age}}</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button class="btn btn-primary btn-sm"
-                                                data-ng-click="eEdit(item)">
-                                            <i class="fa fa-pencil-square-o"></i> Edit
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-sm"
-                                                data-ng-click="eDelete(item)">
-                                            <i class="fa fa-trash-o fa-sm"></i> Delete
-                                        </button>
-
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
-                        <div>
-                            <button class="btn btn-primary btn-block"
-                                    data-ng-click="newUser()">
-
-                                <i class="fa fa-user-plus">Add</i>
-                            </button>
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class=" col-sm-1 col-md-1  col-lg-1 ">
-            </div>
-            <div class="col-xs-1 col-sm-1 col-md-1  col-lg-1 "></div>
-        </div>
-
-
-        <!--Модальные окно-->
-        <!--1 модальное окна редактирование -->
-
-        <div>
-            <script type="text/ng-template" id="editModalContent.html">
-                <form data-ng-submit="editUserTab()">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Редактировать пользователя</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Форма для редактирования данных</p>
-
-                        <td>Name
-                            <input
-                                    class="form-control"
-                                    data-ng-model="temp.name"/>
-                        </td>
-                        <td>Age
-                            <input
-                                    class="form-control"
-                                    data-ng-model="temp.age"/>
-                        </td>
-                        <!--<td>Name<input class="form-control" value="{{item.name}}" data-ng-model="item.team.name"/></td>-->
-                        <!--<td>Age<input class="form-control" value="{{item.age}}" data-ng-model="item.team.age" /></td>-->
-
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" type="submit" data-ng-click="eEditEnd(temp, item)">Save
-                            changes
-                        </button>
-                        <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
-                    </div>
-                </form>
-            </script>
-        </div>
-
-        <!--Конец 1 модального окна-->
-        <!--2 модальное окно удалить-->
-        <div>
-            <script type="text/ng-template" id="addDel.html">
-                <form data-ng-submit="deleteUserTable()">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Удаление пользователя</h4>
-                    </div>
-                    <div class="modal-body">
-                        <!--<input class="form-control" value="hidden" data-ng-model="item.name">-->
-                        <p>Пользователь <b style="color: #ff4085">{{item.name}}</b> будет удалён!! </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-danger" type="submit" data-ng-click="eDeleteEnd(item)">Delete</button>
-                        <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
-                    </div>
-                </form>
-            </script>
-        </div>
-        <!--Конец 2 модального окна-->
-
-
-        <!--3 модальное окно добавление нового пользователя-->
-        <div>
-            <script type="text/ng-template" id="addNewUser.html">
-                <form data-ng-submit="agregarTarea()" method="post">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Добавить нового пользователя</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Форма для добавление нового пользователя</p>
-                        <td>Name
-                            <input
-                                    type="text"
-                                    id="item_name"
-                                    placeholder="Input name"
-                                    class="form-control"
-                                    data-ng-model="item.name"
-                                    required
-
-                                    />
-                            <p class="alert" data-ng-show="digits.nums.$error.pattern"></p>
-                        </td>
-                        <td>Age
-                            <input
-                                    type="text"
-                                    class="form-control"
-                                    id="item_age"
-                                    placeholder="Input age"
-                                    data-ng-model="item.age"
-                                    required
-                                    data-ng-pattern="/^(\d)+$/"
-                                    data-ng-minlength="2"
-                                    />
-                            <p class="alert" ng-show="digits.nums.$error.pattern">Numbers only, please</p>
-                        </td>
-                    </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" type="submit" data-ng-click="eAddEnd()">Save changes</button>
-                        <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
-                    </div>
-                </form>
-            </script>
-        </div>
-
-        <!--Конец 3 модального окна-->
-
-
+    <div class="page-header">
+        <h2 class="header_global">Information about the user <i class="fa fa-bookmark-o fa-sm"></i></h2>
     </div>
+    <div class="row">
+        <div class="col-xs-9 col-sm-9 col-md-9  col-lg-9 ">
+                    <table class="table">
+                        <caption></caption>
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr data-ng-repeat="item in items">
+                            <td id="userName">{{item.name}}</td>
+                            <td id="userAge">{{item.age}}</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-primary btn-sm" data-ng-click="eEdit(item)">
+                                        <i class="fa fa-pencil-square-o"></i> Edit
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm" data-ng-click="eDelete(item)">
+                                        <i class="fa fa-trash-o fa-sm"></i> Delete
+                                    </button>
+
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+            <div>
+                <button class="btn btn-primary btn-block" data-ng-click="newUser()">
+                    <i class="fa fa-user-plus">Add</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Модальные окно-->
+    <!--1 модальное окна редактирование -->
+
+    <div>
+        <script type="text/ng-template" id="editModalContent.html">
+            <form data-ng-submit="editUserTab()">
+                <div class="modal-header">
+                    <h4 class="modal-title">Редактировать пользователя</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Форма для редактирования данных</p>
+
+                    <td>Name
+                        <input class="form-control" data-ng-model="temp.name"/>
+                    </td>
+                    <td>Age
+                        <input class="form-control" data-ng-model="temp.age"/>
+                    </td>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" data-ng-click="eEditEnd(temp, item)">Save
+                        changes
+                    </button>
+                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                </div>
+            </form>
+        </script>
+    </div>
+
+    <!--Конец 1 модального окна-->
+    <!--2 модальное окно удалить-->
+    <div>
+        <script type="text/ng-template" id="addDel.html">
+            <form data-ng-submit="deleteUserTable()">
+                <div class="modal-header">
+                    <h4 class="modal-title">Удаление пользователя</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Пользователь <b style="color: #ff4085">{{item.name}}</b> будет удалён!! </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="submit" data-ng-click="eDeleteEnd(item)">Delete</button>
+                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                </div>
+            </form>
+        </script>
+    </div>
+    <!--Конец 2 модального окна-->
+
+
+    <!--3 модальное окно добавление нового пользователя-->
+    <div>
+        <script type="text/ng-template" id="addNewUser.html">
+            <form data-ng-submit="agregarTarea()" method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Добавить нового пользователя</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Форма для добавление нового пользователя</p>
+                    <td>Name
+                        <input
+                                type="text"
+                                id="item_name"
+                                placeholder="Input name"
+                                class="form-control"
+                                data-ng-model="item.name"
+                                required
+                                />
+
+                        <p class="alert" data-ng-show="digits.nums.$error.pattern"></p>
+                    </td>
+                    <td>Age<input
+                                type="text"
+                                class="form-control"
+                                id="item_age"
+                                placeholder="Input age"
+                                data-ng-model="item.age"
+                                required
+                                data-ng-pattern="/^(\d)+$/"
+                                data-ng-minlength="2"/>
+
+                        <p class="alert" data-ng-show="digits.nums.$error.pattern">Numbers only, please</p>
+                    </td>
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" data-ng-click="eAddEnd()">Save changes</button>
+                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                </div>
+            </form>
+        </script>
+    </div>
+    <!--Конец 3 модального окна-->
 </form>

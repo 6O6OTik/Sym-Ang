@@ -14,6 +14,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/", name="homePage")
+     * @Route("/test", name="test")
      * @Route("/home", name="homeName")
      * @Route("/login", name="loginNamePage")
      * @Route("/registration", name="regNamePage")
