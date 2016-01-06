@@ -1,6 +1,7 @@
 <?php
 namespace Login\LoginBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -28,6 +29,18 @@ class Users
      * @ORM\Column(type="string", length=255)
      */
     protected $password;
+
+
+//    Поле для ссылки one-to-many
+//
+//    /**
+//     * @OneToMany(targetEntity="UsersTask",mappedBy="User_id")
+//     */
+//    private  $tasks;
+//
+//    public  function __construct(){
+//        $this->tasks = new ArrayCollection();
+//    }
 
     /**
      * @return mixed

@@ -7,8 +7,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="usersTable")
+ * @ORM\Table(name="usersTask")
  */
+//usetr  prod
+//feature task
 
 class UsersTask
 {
@@ -36,7 +38,12 @@ class UsersTask
      */
     protected $priority;
 
-
+//    Поле для ссылки many-to-one
+//
+//    /**
+//     * @ManyToOne(targetEntity="Users", inversedBy="tasks")
+//     */
+//    private $User_id;
 
     /**
      * Get id
