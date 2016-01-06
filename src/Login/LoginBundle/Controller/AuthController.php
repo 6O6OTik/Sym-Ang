@@ -21,10 +21,9 @@ class AuthController extends Controller
     {
         // replace this example code with whatever you need
         return $this->render('LoginLoginBundle:Default:index.html.twig', array(
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir') . '/..'),
         ));
     }
-
 
 
     /**
@@ -33,7 +32,7 @@ class AuthController extends Controller
     public function LoginAction(Request $request)
     {
         if ($request->getMethod() == 'POST') {
-            $data = json_decode($request->getContent(),true);
+            $data = json_decode($request->getContent(), true);
             $username = $data['username'];
             $password = $data['password'];
 
@@ -59,14 +58,16 @@ class AuthController extends Controller
         }
         return $this->render('LoginLoginBundle:Default:login.html.twig');
     }
+
     /**
      * @Route("/user", name="user_sin" )
      */
-        public function LkAction(Request $request)
-        {
-            if ($request->getMethod() == "POST"){}
-
+    public function LkAction(Request $request)
+    {
+        if ($request->getMethod() == "POST") {
         }
+
+    }
 
     /**
      * @Route("/reg", name="login_sin" )
@@ -74,7 +75,7 @@ class AuthController extends Controller
     public function RegAction(Request $request)
     {
         if ($request->getMethod() == 'POST') {
-            $data = json_decode($request->getContent(),true);
+            $data = json_decode($request->getContent(), true);
             $username = $data['username'];
             $password = $data['password'];
             $email = $data['email'];
@@ -90,7 +91,7 @@ class AuthController extends Controller
         }
         if ($user) {
             return new JsonResponse([
-                'username' => $user ->getUsername(),
+                'username' => $user->getUsername(),
                 'success' => true
             ]);
         } else {
@@ -102,11 +103,77 @@ class AuthController extends Controller
     /**
      * @Route("/reg", name="login_logout" )
      */
-    public function LogoutAction(Request $request){
+    public function LogoutAction(Request $request)
+    {
 
-    return $this->render('LoginLoginBundle:Default:index.html.twig');
-}
+        return $this->render('LoginLoginBundle:Default:index.html.twig');
+    }
 
+
+//    для таблицы заданий для юзера
+    /**
+     * @Route("/showTask", name="show_task_user")
+     */
+    public function shtaskAction(Request $request)
+    {
+        $em = $this -> getDoctrine() -> getManager();
+        $tasks = $em -> getRepository('LoginLoginBundle:UsersTask') -> findAll();
+
+        $result = ('');
+
+        foreach($tasks as $key => $task){
+            $result[$key]['id'] = $task->getId();
+            $result[$key]['username'] = $task ->getUsername();
+            $result[$key]['taskTitle'] = $task ->getTaskTitle();
+            $result[$key]['taskBody'] = $task ->getTaskBody();
+            $result[$key]['status'] = $task ->getPriority();
+        }
+        $response = new Response(json_encode($result));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
+
+    /**
+     * @Route("/addTaskUser", name="task_user")
+     */
+    public function addTaskUserAction(Request $request)
+    {
+        if ($request->getMethod() == 'POST') {
+            $data = json_decode($request->getContent(), true);
+            $username = $data['username'];
+            $taskTitle = $data['taskTitle'];
+            $taskBody = $data['taskBody'];
+            $priority = $data['priority'];
+
+            $task = new Task();
+            $task->setTask($task);
+            $task->setPriority($priority);
+            $task->setUsername($username);
+            $task->setTaskTitle($taskTitle);
+            $task->setTaskBody($taskBody);
+
+            $em = $this->getDoctrine()->getEntityManager();
+            $em->persist($task);
+            $em->flush();
+
+
+        }
+        if ($task) {
+            return new JsonResponse([
+                'username' => $task->getUsername(),
+                'taskTitle' => $task->getTaskTitle(),
+                'taskBody' => $task->getTaskBidy(),
+                'priority' => $task->getPriority(),
+                'success' => true
+            ]);
+
+        } else {
+            throw  new NotFoundHttpException("Problem");
+        }
+//        return $this->render('LoginLoginBundle:Default:login.html.twig');
+    }
 
 
 }
