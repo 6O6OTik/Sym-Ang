@@ -1,22 +1,270 @@
 <div class="row">
-    <br>
+    <div class="page-header">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style=" border: 1px double black;"></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style=" border: 1px double red; ">
+            <h1 style="color: #193c5a" class="header_global">
+                <i class="fa fa-spin fa-asterisk" style="color: #00b3ee"></i>
+                Home
+            </h1>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style=" border: 1px double red; ">
+            <div class="userNameTatle">
+                <h2>{{use}} {{usss}} </h2>
 
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <h1 style="color: #193c5a"><i class="fa fa-spin fa-asterisk" style="color: #00b3ee"></i> Home </h1>
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <br>
-        <br>
-        <br>
-       {{$scope.username}}
-       {{username}}
-    </div>
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        <br>
-            {{message}}
-            <p><a href="/login" class="btn  btn-default"  style="color: #857db6">Logout</a></p>
-    </div>
 
+            </div>
+
+        </div>
+    </div>
 </div>
 
+<div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 panelTaskLeft" style=" border: 1px double black;
+    ">
+        <div class="profile_foto">
+            <img class="img-responsive" src="app/images/maket.png" alt="">
+        </div>
+
+        <div class="block-menu-user">
+            <div class="block-menu-user_but">
+                <button class="btn btn-sm btn-block btn-primary" data-ng-click="AddTask()">Add new task</button>
+            </div>
+
+            <div class="block-menu-user_but">
+                <p><a href="/login" class="btn btn-block btn-sm btn-primary" style="color: rgba(255, 253, 193, 0.88)">Logout</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+
+    </div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 panelTask" style=" border: 1px double black;">
+        <div class="panel panel-warning">
+            <div class="panel-heading">Task list info</div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Task id</th>
+                    <th>Task title</th>
+                    <th>Task body</th>
+                    <th>Task status</th>
+                    <th>Setting <i class="fa fa-cogs"></i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-ng-repeat="date in dates">
+                    <td>{{date.id}}</td>
+                    <td>{{date.title}}</td>
+                    <td>{{date.body}}</td>
+                    <td>{{date.status}}</td>
+                    <td>
+                        <button class="fa fa-eye " data-ng-click="viewTask(date)"></button>
+                        <button class="fa fa-pencil" data-ng-click="editTask(date)"></button>
+                        <button class="fa fa-minus-circle"  data-ng-click="deleteTask(date)"></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!--модальные окна  -->
+<div>
+    <script type="text/ng-template" id="addTaskUser.html">
+        <form data-ng-submit="deleteUserTable()">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <h4 class="modal-title">Form for add new task</h4>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                            <div class="form-group">
+                                <lable>
+                                    <h4>Title</h4>
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="input task title">
+                                </lable>
+                            </div>
+                            <div class="form-group">
+                                <lable>
+                                    <h4>Body</h4>
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="input task body">
+                                </lable>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                <h4>Status {{date.status}}</h4>
+                                <label>
+                                    <input type="radio"
+                                           name="statusTask"
+                                           data-ng-change="RadioChange('low')"
+                                           data-ng-model="date.status"
+                                           value="low">
+                                    Low priority
+                                </label>
+                                <label>
+                                    <input type="radio"
+                                           name="statusTask"
+                                           data-ng-change="RadioChange('normal')"
+                                           data-ng-model="date.status"
+                                           value="normal">
+                                    Normal priority
+                                </label>
+                                <label >
+                                    <input type="radio"
+                                           name="statusTask"
+                                           data-ng-change="RadioChange('critical')"
+                                           data-ng-model="date.status"
+                                           value="critical">
+                                    Critical priority
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" data-ng-click="AddTaskEnd()">Add new task</button>
+                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </script>
+</div>
+
+<!--модальное окно отображения информации -->
+
+<div>
+    <script type="text/ng-template" id="viewTaskUser.html">
+        <form data-ng-submit="deleteUserTable()">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <h3 class="modal-title">Detailed description of the task</h3>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                            <h4>Number for task : № {{date.id}} <br>
+                                Title fot task : <b>{{date.title}}</b> <br>
+                                Body for task : <b> {{date.body}}</b><br>
+                                Status for task : {{date.status}}</h4>
+                        </div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-ng-click="cancel()">Return</button>
+                </div>
+            </div>
+        </form>
+    </script>
+</div>
+
+<!--модальное окно для редактирования пользователя-->
+
+<div>
+    <script type="text/ng-template" id="editTaskUser.html">
+        <form data-ng-submit="deleteUserTable()">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <h4 class="modal-title">Edit description of the task</h4>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                            <td>
+                                <h4>Title</h4>
+                                <input type="text" data-ng-model="date.title">
+                            </td>
+                            <td>
+                                <h4>Body</h4>
+                                <input type="text" data-ng-model="date.body">
+                            </td>
+                            <td>
+                                <h4>Status</h4>
+                                <input type="text" data-ng-model="date.status">
+                            </td>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" data-ng-click="EndViewTaskEnd(date)">Save the changes
+                    </button>
+                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                </div>
+
+            </div>
+        </form>
+    </script>
+</div>
+
+
+<div>
+    <script type="text/ng-template" id="deleteTaskUser.html">
+        <form data-ng-submit="deleteUserTable()">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <h4 class="modal-title">Delete description of the task</h4>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                            <p>You seriously want to remove task № <b>{{date.id}}</b>, under name<b> {{date.title}}</b>
+                                from task <b>{{date.body}}</b>, in status <b> {{date.status}}</b> ??</p>
+                            <p>If yes, press the Delete button.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="submit" data-ng-click="EndViewTaskEnd(date)">Delete
+                    </button>
+                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                </div>
+
+            </div>
+        </form>
+    </script>
+</div>
 

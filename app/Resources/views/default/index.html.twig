@@ -5,7 +5,7 @@
     <title>Symfony + AngularJs</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     <link href="{{ asset('app/lib/bootstrap/dist/css/bootstrap.css') }}" type="text/css" rel="stylesheet"/>
-    <link href="{{ asset('app/css/style.css') }}" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('app/styles/style.css') }}" type="text/css" rel="stylesheet"/>
 
     <link href="{{ asset('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css') }}" type="text/css"
               rel="stylesheet"/>
@@ -22,7 +22,8 @@
 
     <footer></footer>
 
-    <script src="{{ asset('app/scripts/js/jquery-1.11.3.js') }}" type="text/javascript"></script>
+
+    <script src="{{ asset('app/lib/jquery/dist/jquery.js') }}" type="text/javascript"></script>
 
     <script src="{{ asset('app/lib/angular/angular.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/lib/angular-animate/angular-animate.js') }}" type="text/javascript"></script>
@@ -38,23 +39,24 @@
 
 
     <script src="{{ asset('app/scripts/app.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('app/scripts/js/main.js') }}" type="text/javascript"></script>
+
     <script src="{{ asset('app/scripts/controllers/tableInfo.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/controllers/pageUserCtrl.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/controllers/loginCtrl.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/controllers/registrationCtrl.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/controllers/navbarCtrl.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('app/scripts/controllers/footerCtrl.js') }}" type="text/javascript"></script>
 
     <script src="{{ asset('app/scripts/services/loginService.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/services/registrationService.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/services/TableInfoService.js') }}" type="text/javascript"></script>
-    {#<script src="{{ asset('app/scripts/filter/tableInfoFilter.js') }}" type="text/javascript"></script>#}
+
 
 
     <script src="{{ asset('app/scripts/directives/navbarDir.js') }}" type="text/javascript"></script>
     <script src="{{ asset('app/scripts/directives/footerDir.js') }}" type="text/javascript"></script>
 
-    {#<script src="{{ asset('app/scripts/directives/navigationT.js') }}" type="text/javascript"></script>#}
+
 
 
     {#<script src="{{ asset('app/lib/parsleyjs/dist/parsley.min.js') }}" type="text/javascript"></script>#}

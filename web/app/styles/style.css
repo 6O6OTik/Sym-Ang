@@ -121,7 +121,8 @@ section a:nth-child(6):hover i {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 930px;
+        /*max-width: 730px;*/
     }
 
     /* Remove the padding we set earlier */
@@ -219,4 +220,24 @@ small {
 /*interval h2*/
 .title-preview{
     padding-top: 50px;
+}
+
+/*uset page*/
+.block-menu-user {
+    padding-top: 70px;
+}
+.block-menu-user_but {
+    padding: 5px;
+}
+.profile_foto{
+    padding-top: 10px;
+}
+.userNameTatle {
+    padding-top: 20px;
+}
+.panelTask {
+    padding: 10px 5px 0 5px ;
+}
+.panelTaskLeft{
+    padding: 0 5px;
 }

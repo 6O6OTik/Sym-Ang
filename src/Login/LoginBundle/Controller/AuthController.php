@@ -59,7 +59,14 @@ class AuthController extends Controller
         }
         return $this->render('LoginLoginBundle:Default:login.html.twig');
     }
+    /**
+     * @Route("/user", name="user_sin" )
+     */
+        public function LkAction(Request $request)
+        {
+            if ($request->getMethod() == "POST"){}
 
+        }
 
     /**
      * @Route("/reg", name="login_sin" )
