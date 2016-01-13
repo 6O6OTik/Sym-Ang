@@ -43,6 +43,7 @@ class AuthController extends Controller
 
             if ($user) {
                 return new JsonResponse([
+
                     'username' => $user->getUserName(),
                     'success' => true
 

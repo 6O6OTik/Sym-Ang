@@ -1,8 +1,10 @@
 <?php
 namespace Login\LoginBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Login\LoginBundle\Entity\UsersTask;
 
 /**
  * @ORM\Entity
@@ -11,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Users
 {
     /**
-     * @ORM\Id()
+     * @ORM\Id
      * @ORM\Column(type="integer", length=11)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -28,6 +30,19 @@ class Users
      * @ORM\Column(type="string", length=255)
      */
     protected $password;
+
+
+//    Поле для ссылки one-to-many
+
+    /**
+     * @ORM\OneToMany(targetEntity="UsersTasks",mappedBy="task_id")
+     */
+    private  $usersTasks;
+
+    public  function __construct(){
+
+        $this->usersTasks = new ArrayCollection();
+    }
 
     /**
      * @return mixed
@@ -93,4 +108,37 @@ class Users
     }
 
 
+
+    /**
+     * Add usersTasks
+     *
+     * @param \Login\LoginBundle\Entity\UsersTasks $usersTasks
+     * @return Users
+     */
+    public function addUsersTask(\Login\LoginBundle\Entity\UsersTasks $usersTasks)
+    {
+        $this->usersTasks[] = $usersTasks;
+
+        return $this;
+    }
+
+    /**
+     * Remove usersTasks
+     *
+     * @param \Login\LoginBundle\Entity\UsersTasks $usersTasks
+     */
+    public function removeUsersTask(\Login\LoginBundle\Entity\UsersTasks $usersTasks)
+    {
+        $this->usersTasks->removeElement($usersTasks);
+    }
+
+    /**
+     * Get usersTasks
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getUsersTasks()
+    {
+        return $this->usersTasks;
+    }
 }

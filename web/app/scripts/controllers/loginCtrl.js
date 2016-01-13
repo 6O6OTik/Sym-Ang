@@ -13,7 +13,9 @@ angular.module('prApp')
                 if(response.success){
                     loginService.SetCredentials($scope.username, $scope.password);
                     $location.path('/user');
-                    console.log($scope.username, $scope.password)
+                    console.log('sd');
+                    console.log($scope.username, $scope.password);
+                    console.log($scope)
                 } else {
                     $scope.error = response.message;
                     $scope.dataLoading = false;

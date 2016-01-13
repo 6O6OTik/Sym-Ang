@@ -49,9 +49,9 @@ angular
     })
     .run(['$rootScope', '$location', '$cookieStore', '$http',
         function ($rootScope, $location, $cookieStore, $http) {
-                     $rootScope.globals = $cookieStore.get('globals') || {};
-            if ($rootScope.globals.currentUser) {
-                $http.defaults.headers.common['prApp'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+                     $rootScope.window = $cookieStore.get('window') || {};
+            if ($rootScope.window.currentUser) {
+                $http.defaults.headers.common['prApp'] = 'Basic ' + $rootScope.window.currentUser.authdata;
             }
 
             //$rootScope.$on('$locationChangeStart', function (event, next, current) {

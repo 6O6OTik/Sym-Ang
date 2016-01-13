@@ -4,25 +4,23 @@ namespace Login\LoginBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Login\LoginBundle\Entity\Users;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="usersTable")
+ * @ORM\Table(name="usersTask")
  */
+
 
 class UsersTask
 {
     /**
-     * @ORM\Id()
-     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\Column(type="integer", length=11)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
 
-    protected $username;
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -36,7 +34,18 @@ class UsersTask
      */
     protected $priority;
 
+//    Поле для ссылки many-to-one
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $task_id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Users", inversedBy="UsersTasks")
+     * @ORM\JoinColumn(name="task_id", referencedColumnName="task_id")
+     */
+
+    private $users;
 
     /**
      * Get id

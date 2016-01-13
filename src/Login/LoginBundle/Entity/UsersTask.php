@@ -4,13 +4,13 @@ namespace Login\LoginBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Login\LoginBundle\Entity\Users;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="usersTask")
  */
-//usetr  prod
-//feature task
+
 
 class UsersTask
 {
@@ -20,11 +20,6 @@ class UsersTask
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-
-    protected $username;
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -38,17 +33,26 @@ class UsersTask
      */
     protected $priority;
 
-//    Поле для ссылки many-to-one
-//
+//    start many-to-one
 //    /**
-//     * @ManyToOne(targetEntity="Users", inversedBy="tasks")
+//     * @ORM\Column(type="string", length=255)
 //     */
-//    private $User_id;
+//    protected $task_id;
+//
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Users", inversedBy="usersTask")
+     * @ORM\JoinColumn(name="userTaskId", referencedColumnName="id")
+     */
 
+    private $userTaskId;
+
+
+//    end many-to-one
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -71,7 +75,7 @@ class UsersTask
     /**
      * Get task
      *
-     * @return string 
+     * @return string
      */
     public function getTask()
     {
@@ -94,35 +98,14 @@ class UsersTask
     /**
      * Get priority
      *
-     * @return string 
+     * @return string
      */
     public function getPriority()
     {
         return $this->priority;
     }
 
-    /**
-     * Set username
-     *
-     * @param string $username
-     * @return UsersTask
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
 
-        return $this;
-    }
-
-    /**
-     * Get username
-     *
-     * @return string 
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
 
     /**
      * Set taskTitle
@@ -140,7 +123,7 @@ class UsersTask
     /**
      * Get taskTitle
      *
-     * @return string 
+     * @return string
      */
     public function getTaskTitle()
     {
@@ -163,10 +146,26 @@ class UsersTask
     /**
      * Get taskBody
      *
-     * @return string 
+     * @return string
      */
     public function getTaskBody()
     {
         return $this->taskBody;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserTaskId()
+    {
+        return $this->userTaskId;
+    }
+
+    /**
+     * @param mixed $userTaskId
+     */
+    public function setUserTaskId($userTaskId)
+    {
+        $this->userTaskId = $userTaskId;
     }
 }

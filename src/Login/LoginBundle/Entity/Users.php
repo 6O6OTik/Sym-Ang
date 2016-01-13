@@ -4,6 +4,7 @@ namespace Login\LoginBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Login\LoginBundle\Entity\UsersTask;
 
 /**
  * @ORM\Entity
@@ -12,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Users
 {
     /**
-     * @ORM\Id()
+     * @ORM\Id
      * @ORM\Column(type="integer", length=11)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -31,16 +32,28 @@ class Users
     protected $password;
 
 
-//    Поле для ссылки one-to-many
-//
-//    /**
-//     * @OneToMany(targetEntity="UsersTask",mappedBy="User_id")
-//     */
-//    private  $tasks;
-//
-//    public  function __construct(){
-//        $this->tasks = new ArrayCollection();
-//    }
+//   start one-to-many
+
+    /**
+     * @ORM\OneToMany(targetEntity="UsersTask",mappedBy="userTaskId")
+     */
+    protected  $usersTask;
+
+    public  function __construct(){
+
+        $this->usersTask = new ArrayCollection();
+    }
+
+
+
+//   End one-to-many
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return mixed
@@ -53,40 +66,9 @@ class Users
     /**
      * @return mixed
      */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getEmail()
     {
         return $this->email;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username)
-    {
-        $this->username = $username;
     }
 
     /**
@@ -98,11 +80,43 @@ class Users
     }
 
     /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
      * @param mixed $password
      */
     public function setPassword($password)
     {
         $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsersTask()
+    {
+        return $this->usersTask;
     }
 
 

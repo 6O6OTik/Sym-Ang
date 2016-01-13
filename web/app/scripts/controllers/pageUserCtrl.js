@@ -1,39 +1,45 @@
 'use strict';
 
 angular.module('prApp')
-    .controller('usersCtrl', ['$scope', '$rootScope', '$modal',
-        function ($scope, $rootScope, $modal) {
+    .controller('usersCtrl', ['$scope', '$rootScope', '$modal','loginService',
+        function ($scope, $rootScope, $modal,loginService) {
+            $scope.loginService = loginService;
+
+
+console.log($scope);
+
+
 
             $scope.use = 'Иван';
             $scope.usss = 'Иван';
-            $scope.dates = [
-                {
-                    'id': '1',
-                    'title': 'task 1',
-                    'body': 'bla-bla-bla',
-                    'status': 'low'
-                },
-                {
-                    'id': '2',
-                    'title': 'task 2',
-                    'body': 'la-la-la',
-                    'status': 'normal'
-                },
-                {
-                    'id': '3',
-                    'title': 'task 3',
-                    'body': 'bla-bla-blbla-bla-bla-bla-bla',
-                    'status': 'critical'
-                },
-                {
-                    'id': '4',
-                    'title': 'task 4',
-                    'body': 'bla-bla-bla 123',
-                    'status': 'low'
-
-                }
-
-            ];
+            //$scope.dates = [
+            //    {
+            //        'id': '1',
+            //        'title': 'task 1',
+            //        'body': 'bla-bla-bla',
+            //        'status': 'low'
+            //    },
+            //    {
+            //        'id': '2',
+            //        'title': 'task 2',
+            //        'body': 'la-la-la',
+            //        'status': 'normal'
+            //    },
+            //    {
+            //        'id': '3',
+            //        'title': 'task 3',
+            //        'body': 'bla-bla-blbla-bla-bla-bla-bla',
+            //        'status': 'critical'
+            //    },
+            //    {
+            //        'id': '4',
+            //        'title': 'task 4',
+            //        'body': 'bla-bla-bla 123',
+            //        'status': 'low'
+            //
+            //    }
+            //
+            //];
 
             $scope.AddTask = function () {
                 var modalInstance = $modal.open({
