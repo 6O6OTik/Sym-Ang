@@ -35,13 +35,13 @@ class Users
 //   start one-to-many
 
     /**
-     * @ORM\OneToMany(targetEntity="UsersTask",mappedBy="userTaskId")
+     * @ORM\OneToMany(targetEntity="UsersTask", mappedBy="user")
      */
-    protected  $usersTask;
+    protected  $usersTasks;
 
     public  function __construct(){
 
-        $this->usersTask = new ArrayCollection();
+        $this->usersTasks = new ArrayCollection();
     }
 
 
@@ -114,9 +114,9 @@ class Users
     /**
      * @return mixed
      */
-    public function getUsersTask()
+    public function getUsersTasks()
     {
-        return $this->usersTask;
+        return $this->usersTasks;
     }
 
 

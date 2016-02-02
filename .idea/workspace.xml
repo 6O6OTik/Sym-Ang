@@ -1,20 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/web/app/scripts/controllers/tableInfo.js" />
+    <bookmark url="file://$PROJECT_DIR$/web/app/scripts/tableUserInfo/tableInfo.js" />
+    <bookmark url="file://$PROJECT_DIR$/web/app/scripts/login/loginCtrl.js" line="14" />
+    <bookmark url="file://$PROJECT_DIR$/web/app/views/user.html" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77bf82b3-36a9-4c2e-b0b4-1fdb60906fe9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/app/scripts/htmlTemplate/FooterCtrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Login/LoginBundle/Controller/TaskController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/app/scripts/pageUser/usersService.js" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\css\swap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\data\var\data_priv.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\data\var\data_user.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\sizzle\dist\sizzle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\sizzle\dist\sizzle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\sizzle\dist\sizzle.min.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\lib\jquery\src\var\strundefined.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\FooterCtrl.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\edit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\filter\tableInfoFilter.js" afterPath="" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\loginCtrl.js" afterPath="$PROJECT_DIR$/web/app/scripts/login/loginCtrl.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\navbarCtrl.js" afterPath="$PROJECT_DIR$/web/app/scripts/htmlTemplate/navbarCtrl.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\pageUserCtrl.js" afterPath="$PROJECT_DIR$/web/app/scripts/pageUser/pageUserCtrl.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\registrationCtrl.js" afterPath="$PROJECT_DIR$/web/app/scripts/registration/registrationCtrl.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\controllers\tableInfo.js" afterPath="$PROJECT_DIR$/web/app/scripts/tableUserInfo/tableInfo.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\directives\footerDir.js" afterPath="$PROJECT_DIR$/web/app/scripts/htmlTemplate/footerDir.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\directives\navbarDir.js" afterPath="$PROJECT_DIR$/web/app/scripts/htmlTemplate/navbarDir.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\directives\navigationT.js" afterPath="$PROJECT_DIR$/web/app/scripts/htmlTemplate/navigationT.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\services\TableInfoService.js" afterPath="$PROJECT_DIR$/web/app/scripts/tableUserInfo/TableInfoService.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\services\loginService.js" afterPath="$PROJECT_DIR$/web/app/scripts/login/loginService.js" />
+      <change type="MOVED" beforePath="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\services\registrationService.js" afterPath="$PROJECT_DIR$/web/app/scripts/registration/registrationService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/web/app/lib/angular/angular.min.js.gzip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-animate/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-cookies/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-cookies/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-mocks/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-mocks/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-resource/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-resource/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-route/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-route/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-sanitize/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-sanitize/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-touch/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-touch/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/.bower.json" afterPath="$PROJECT_DIR$/web/app/lib/jquery/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Login/LoginBundle/Controller/AuthController.php" afterPath="$PROJECT_DIR$/src/Login/LoginBundle/Controller/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/README.md" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/README.md" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/effects/Tween.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Login/LoginBundle/Entity/Users.php" afterPath="$PROJECT_DIR$/src/Login/LoginBundle/Entity/Users.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php" afterPath="$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/affix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-animate/angular-animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-animate/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/web/app/lib/angular-animate/angular-animate.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-animate/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-cookies/angular-cookies.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-cookies/angular-cookies.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-cookies/angular-cookies.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-cookies/angular-cookies.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-mocks/angular-mocks.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-mocks/angular-mocks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-resource/angular-resource.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-resource/angular-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-resource/angular-resource.min.js.map" afterPath="$PROJECT_DIR$/web/app/lib/angular-resource/angular-resource.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-resource/angular-resource.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-resource/angular-resource.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-route/angular-route.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-route/angular-route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-route/angular-route.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-route/angular-route.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-sanitize/angular-sanitize.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-sanitize/angular-sanitize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-sanitize/angular-sanitize.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-sanitize/angular-sanitize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-touch/angular-touch.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-touch/angular-touch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-touch/angular-touch.min.js.map" afterPath="$PROJECT_DIR$/web/app/lib/angular-touch/angular-touch.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-touch/angular-touch.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-touch/angular-touch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/angular.js" afterPath="$PROJECT_DIR$/web/app/lib/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/web/app/lib/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/angular.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/effects/animatedSelector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/scripts/app.js" afterPath="$PROJECT_DIR$/web/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/scripts/controllers/loginCtrl.js" afterPath="$PROJECT_DIR$/web/app/scripts/controllers/loginCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/views/navbar.html" afterPath="$PROJECT_DIR$/web/app/views/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/scripts/controllers/pageUserCtrl.js" afterPath="$PROJECT_DIR$/web/app/scripts/controllers/pageUserCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/arr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/directives/autoValidateFormOptions.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/directives/autoValidateFormOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap-theme.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/bootstrap.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/services/bootstrap3ElementModifier.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/services/bootstrap3ElementModifier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-animate/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-animate/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-cookies/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-cookies/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-mocks/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-mocks/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-resource/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-resource/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-route/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-route/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-sanitize/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-sanitize/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-touch/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-touch/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/bower.json" afterPath="$PROJECT_DIR$/web/app/lib/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/button-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/carousel.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/dist/changelog.txt" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/dist/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/class2type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/grunt/configBridge.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/core.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/cssExpand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/data.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/services/debounce.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/services/debounce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/defaultDisplay.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/defaultDisplay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/effects.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/event.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/views/footer.html" afterPath="$PROJECT_DIR$/web/app/views/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/getStyles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/glyphicons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/hasOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/hide-text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/input-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/intro.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/isHidden.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/dist/jcs-auto-validate.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/dist/jcs-auto-validate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/dist/jcs-auto-validate.min.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/dist/jcs-auto-validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/dist/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/web/app/lib/jquery/dist/jquery.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/jumbotron.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/modals.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/config/ngModelDecorator.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/config/ngModelDecorator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/var/nonce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/offset.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/outro.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/outro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/package.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-animate/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-animate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-cookies/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-cookies/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-mocks/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-mocks/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-resource/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-resource/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-route/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-route/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-sanitize/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-sanitize/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-touch/package.json" afterPath="$PROJECT_DIR$/web/app/lib/angular-touch/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/package.json" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/parseJSON.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/parseJSON.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/pnum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/push.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/queue.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/rmargin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/rnotwhite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/var/rquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/core/var/rsingleTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/selector.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/slice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/styles/style.css" afterPath="$PROJECT_DIR$/web/app/styles/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/views/tableInfo.html" afterPath="$PROJECT_DIR$/web/app/views/tableInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/theme.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/var/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/js/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/type.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/views/user.html" afterPath="$PROJECT_DIR$/web/app/views/user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/services/validationManager.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/services/validationManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/providers/validator.js" afterPath="$PROJECT_DIR$/web/app/lib/angular-auto-validate/src/providers/validator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/web/app/lib/bootstrap/less/mixins/vendor-prefixes.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/web/app/lib/jquery/src/ajax/xhr.js" />
     </list>
     <ignored path="symfonyapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,105 +252,201 @@
     <favorites_list name="symfonyapi" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.425498">
+    <splitter split-orientation="horizontal" split-proportion="0.40169272">
       <split-first>
-        <leaf>
-          <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Entity/Users.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.5253255">
-                  <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
-                  <folding>
-                    <element signature="e#43#91#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.7905569">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/scripts/app.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/web/app/views/footer.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.47692308">
+                      <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="FooterCtrl.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/scripts/htmlTemplate/FooterCtrl.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="pageUserCtrl.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/scripts/pageUser/pageUserCtrl.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="tableInfo.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/web/app/scripts/tableUserInfo/tableInfo.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-0.620438">
+                      <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+                      <folding>
+                        <element signature="e#821#930#0#PHP" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="user.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/app/views/user.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-40.307693">
-                  <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tableInfo.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/tableInfo.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pageUserCtrl.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/pageUserCtrl.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="footerCtrl.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/footerCtrl.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="loginCtrl.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/loginCtrl.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="16" column="66" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="66" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Controller/AuthController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.3076925">
-                  <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UsersTask.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2503618">
-                  <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#44#76#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.9">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="TaskController.php" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Controller/TaskController.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-17.5">
+                      <caret line="150" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+                      <folding>
+                        <element signature="e#48#83#0#PHP" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/views/registration.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="usersService.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/scripts/pageUser/usersService.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.0">
+                      <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="UsersTask.php" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/views/navbar.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="91" />
+                      <folding>
+                        <element signature="n#button#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="tableInfo.html" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/web/app/views/tableInfo.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name=".bowerrc" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/.bowerrc">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/bower.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.30769232">
+                      <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="user.html" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/web/app/views/user.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="0.025185185">
+                      <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+                      <folding>
+                        <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                        <element signature="n#script#0;n#!!top" expanded="false" />
+                        <element signature="n#script#1;n#!!top" expanded="false" />
+                        <element signature="n#script#3;n#!!top" expanded="false" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="TableInfoService.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/web/app/scripts/tableUserInfo/TableInfoService.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state vertical-scroll-proportion="-3.9787233">
+                      <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
@@ -147,8 +454,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Html5" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -161,30 +468,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/app/scripts/services/user.service.js.url" />
-        <option value="$PROJECT_DIR$/web/app/scripts/services/user.service.local-storage.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/services/flash.service.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/services/user.service.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/controllers/registration.js" />
-        <option value="$PROJECT_DIR$/web/app/Resources/views/default/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/app/scripts/services/userService.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/services/sessionService.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/controllers/edit.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/controllers/about.js" />
-        <option value="$PROJECT_DIR$/web/app/scripts/services/FlashService.js" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/BaseApiController.php" />
         <option value="$PROJECT_DIR$/src/Login/LoginBundle/Resources/views/Default/welcome.html.twig" />
         <option value="$PROJECT_DIR$/web/app/scripts/services/TableInfoService.js" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/registrationCtrl.js" />
         <option value="$PROJECT_DIR$/web/app/scripts/services/registrationService.js" />
         <option value="$PROJECT_DIR$/web/app/scripts/services/loginService.js" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/ParentCtrl.js" />
-        <option value="$PROJECT_DIR$/web/app/views/test.html" />
         <option value="$PROJECT_DIR$/web/app/styles/main.css" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/FooterCtrl.js" />
         <option value="$PROJECT_DIR$/web/app/views/home.html" />
         <option value="$PROJECT_DIR$/web/app/css/style.css" />
-        <option value="$PROJECT_DIR$/web/app/views/login.html" />
         <option value="$PROJECT_DIR$/web/app/views/registration.html" />
         <option value="$PROJECT_DIR$/web/app/scripts/filter/tableInfoFolter.js" />
         <option value="$PROJECT_DIR$/web/app/css/fonts/bootstrap-ie7buttonfix.css" />
@@ -195,23 +488,37 @@
         <option value="$PROJECT_DIR$/web/app/views/foot.html" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/footerCtrl.js" />
         <option value="$PROJECT_DIR$/web/app/scripts/directives/footerDir.js" />
-        <option value="$PROJECT_DIR$/web/app/views/footer.html" />
         <option value="$PROJECT_DIR$/web/app/views/sds.html" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Login/LoginBundle/Entity/users_task.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/tableInfo.js" />
-        <option value="$PROJECT_DIR$/web/app/views/user.html" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/web/app/styles/style.css" />
-        <option value="$PROJECT_DIR$/web/app/views/tableInfo.html" />
-        <option value="$PROJECT_DIR$/web/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/pageUserCtrl.js" />
-        <option value="$PROJECT_DIR$/web/app/views/navbar.html" />
-        <option value="$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php" />
         <option value="$PROJECT_DIR$/web/app/scripts/controllers/loginCtrl.js" />
-        <option value="$PROJECT_DIR$/src/Login/LoginBundle/Entity/Users.php" />
+        <option value="$PROJECT_DIR$/web/app/scripts/htmlTemplate/edit.js" />
+        <option value="$PROJECT_DIR$/web/app/scripts/htmlTemplate/FooterCtrl.js" />
+        <option value="$PROJECT_DIR$/web/app/scripts/pageUser/usersCtrl.js" />
+        <option value="$PROJECT_DIR$/.bowerrc" />
+        <option value="$PROJECT_DIR$/web/app/scripts/login/loginCtrl.js" />
+        <option value="$PROJECT_DIR$/web/app/scripts/login/loginService.js" />
         <option value="$PROJECT_DIR$/src/Login/LoginBundle/Controller/AuthController.php" />
+        <option value="$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php" />
+        <option value="$PROJECT_DIR$/src/Login/LoginBundle/Entity/Users.php" />
+        <option value="$PROJECT_DIR$/web/app/views/login.html" />
+        <option value="$PROJECT_DIR$/web/app/scripts/pageUser/usersService.js" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Login/LoginBundle/Controller/TaskController.php" />
+        <option value="$PROJECT_DIR$/web/app/views/tableInfo.html" />
+        <option value="$PROJECT_DIR$/web/app/views/navbar.html" />
+        <option value="$PROJECT_DIR$/web/app/scripts/pageUser/pageUserCtrl.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/web/app/views/test.html" />
+        <option value="$PROJECT_DIR$/web/app/scripts/htmlTemplate/testCtrl.js" />
+        <option value="$PROJECT_DIR$/web/app/views/footer.html" />
+        <option value="$PROJECT_DIR$/web/app/scripts/tableUserInfo/tableInfo.js" />
+        <option value="$PROJECT_DIR$/web/app/styles/style.css" />
+        <option value="$PROJECT_DIR$/web/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/app/views/user.html" />
       </list>
     </option>
   </component>
@@ -231,10 +538,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="345" />
-    <option name="y" value="64" />
-    <option name="width" value="1578" />
-    <option name="height" value="927" />
+    <option name="x" value="68" />
+    <option name="y" value="90" />
+    <option name="width" value="1847" />
+    <option name="height" value="1001" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -413,7 +720,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="tableUserInfo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,7 +746,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="pageUser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htmlTemplate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,8 +829,22 @@
               <option name="myItemId" value="Login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LoginBundle" />
+              <option name="myItemId" value="symfonyapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -493,11 +862,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LoginBundle" />
+              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -519,11 +884,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LoginBundle" />
+              <option name="myItemId" value="AppBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -541,33 +902,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfonyapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfonyapi.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,15 +919,49 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="symfonyapi.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -613,11 +982,11 @@
       <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\src\Login\LoginBundle\Resources\views\Auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\styles" />
-      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\css" />
-      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\services" />
-      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web" />
-      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\bundles\app\scripts" />
+      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\pageUser" />
+      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\htmlTemplate" />
+      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\tableUserInfo" />
+      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\registration" />
+      <recent name="C:\openServer\OpenServer\domains\symfonyapi.dev\web\app\scripts\login" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.dev">
@@ -703,20 +1072,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="345" y="64" width="1578" height="927" extended-state="0" />
+    <frame x="68" y="90" width="1847" height="1001" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16777188" sideWeight="0.4856802" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18570624" sideWeight="0.4856802" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2582547" sideWeight="0.50549453" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26029056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39693356" sideWeight="0.4945055" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983388" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24933511" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16500553" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.139201" sideWeight="0.51431984" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12027027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41089672" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -724,7 +1094,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2612732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -740,14 +1109,14 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16500553" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33932585" sideWeight="0.4856802" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18570624" sideWeight="0.4856802" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2612732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24983388" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24933511" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.139201" sideWeight="0.51431984" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12027027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41089672" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -771,98 +1140,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="219" />
+      <option name="time" value="277" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/directives/navbarDir.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/footerCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5335689">
-          <caret line="177" column="11" selection-start-line="177" selection-start-column="11" selection-end-line="177" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/DataCollector/DumpDataCollector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15194346">
-          <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/AbstractManagerRegistry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.961538">
-          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2222223">
-          <caret line="3229" column="0" selection-start-line="3229" selection-start-column="0" selection-end-line="3229" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1153846">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2307692">
-          <caret line="549" column="0" selection-start-line="549" selection-start-column="0" selection-end-line="549" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.538462">
-          <caret line="369" column="53" selection-start-line="369" selection-start-column="53" selection-end-line="369" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/DebugClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.423077">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.86557376">
-          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -877,66 +1159,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/directives/navigationT.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.615385">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="57" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20722891">
           <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/services/TableInfoService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1098546">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/filter/tableInfoFilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/services/registrationService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76898223">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -955,196 +1181,340 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/directives/navbarDir.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/directives/footerDir.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/images/lined_paper.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/registrationCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/navbarCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.9927641">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/styles/style.css">
+    <entry file="file://$PROJECT_DIR$/web/app/lib/angular/angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49372384">
-          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.6694915">
+          <caret line="15053" column="5" selection-start-line="15053" selection-start-column="5" selection-end-line="15053" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/tableInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6729378">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/services/loginService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19386332">
-          <caret line="91" column="20" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/views/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.307693">
-          <caret line="225" column="33" selection-start-line="225" selection-start-column="33" selection-end-line="225" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/tableInfo.js">
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/registration/registrationService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/registration/registrationCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/htmlTemplate/navbarCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/htmlTemplate/navbarDir.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/htmlTemplate/navigationT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/htmlTemplate/footerDir.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21016483">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/logs/dev.log">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/logs/prod.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="36.487804">
+          <caret line="8" column="624" selection-start-line="8" selection-start-column="624" selection-end-line="8" selection-end-column="624" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/login/loginService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3044776">
+          <caret line="12" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/PersistentCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.038462">
+          <caret line="611" column="0" selection-start-line="611" selection-start-column="0" selection-end-line="611" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42910448">
+          <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/login/loginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7929155">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33259425">
+          <caret line="560" column="0" selection-start-line="560" selection-start-column="0" selection-end-line="560" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7361419">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/footerCtrl.js">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/DataCollector/DumpDataCollector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/pageUserCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/scripts/controllers/loginCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Controller/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3076925">
-          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.3322884">
+          <caret line="265" column="50" selection-start-line="265" selection-start-column="50" selection-end-line="265" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Entity/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5253255">
-          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
-          <folding>
-            <element signature="e#43#91#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-12.461538">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Controller/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33175355">
+          <caret line="3072" column="0" selection-start-line="3072" selection-start-column="0" selection-end-line="3072" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Entity/UsersTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2503618">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#44#76#0#PHP" expanded="true" />
+            <element signature="e#821#930#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/htmlTemplate/FooterCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="91" />
+          <folding>
+            <element signature="n#button#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/tableInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/tableUserInfo/TableInfoService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9787233">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031207599">
+          <caret line="248" column="28" selection-start-line="248" selection-start-column="28" selection-end-line="248" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/tableUserInfo/tableInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.620438">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/pageUser/usersService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/pageUser/pageUserCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47692308">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33264032">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login/LoginBundle/Controller/TaskController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="150" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding>
+            <element signature="e#48#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/views/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025185185">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#!!top" expanded="false" />
+            <element signature="n#script#3;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

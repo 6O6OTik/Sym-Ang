@@ -71,11 +71,8 @@ class DefaultController extends Controller
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find User entity.');
             }
-
             $em->remove($entity);
             $em->flush();
-
-
         }
 
         $response = new Response(json_encode(array('result' => true ) ));

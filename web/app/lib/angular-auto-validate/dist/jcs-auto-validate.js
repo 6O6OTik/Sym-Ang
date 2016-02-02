@@ -1,5 +1,5 @@
 /*
- * angular-auto-validate - v1.19.0 - 2015-10-25
+ * angular-auto-validate - v1.19.3 - 2015-11-30
  * https://github.com/jonsamwell/angular-auto-validate
  * Copyright (c) 2015 Jon Samwell (http://www.jonsamwell.com)
  */
@@ -12,6 +12,7 @@ function ValidatorFn() {
   var elementStateModifiers = {},
     enableValidElementStyling = true,
     enableInvalidElementStyling = true,
+    enableFirstInvalidElementScrollingOnSubmit = false,
     validationEnabled = true,
 
     toBoolean = function (value) {
@@ -246,6 +247,25 @@ function ValidatorFn() {
     enableInvalidElementStyling = enabled;
   };
 
+  /**
+   * @ngdoc function
+   * @name validator#setFirstInvalidElementScrollingOnSubmit
+   * @methodOf validator
+   *
+   * @description
+   * Globally enables first invalid element scrolling on form submit. This is disabled by default.
+   *
+   * @param enabled {Boolean} enabled True to enable scrolling otherwise false.
+   */
+  this.setFirstInvalidElementScrollingOnSubmit = function (enabled) {
+    enableFirstInvalidElementScrollingOnSubmit = enabled;
+  };
+
+  this.firstInvalidElementScrollingOnSubmitEnabled = function () {
+    return enableFirstInvalidElementScrollingOnSubmit;
+  };
+
+
   this.getDomModifier = function (el) {
     var modifierKey = (el !== undefined ? el.attr('element-modifier') : this.defaultElementModifier) ||
       (el !== undefined ? el.attr('data-element-modifier') : this.defaultElementModifier) ||
@@ -287,12 +307,22 @@ function ValidatorFn() {
     }
   };
 
+  this.waitForAsyncValidators = function (el) {
+    if (autoValidateEnabledOnControl(el)) {
+      var dm = this.getDomModifier(el);
+      if (dm.waitForAsyncValidators) {
+        dm.waitForAsyncValidators(el);
+      }
+    }
+  };
+
   this.defaultFormValidationOptions = {
     forceValidation: false,
     disabled: false,
     validateNonVisibleControls: false,
     removeExternalValidationErrorsOnSubmit: true,
-    validateOnFormSubmit: false
+    validateOnFormSubmit: false,
+    waitForAsyncValidators: true
   };
 
   this.$get = [
@@ -305,6 +335,37 @@ function ValidatorFn() {
 angular.module('jcs-autoValidate').provider('validator', ValidatorFn);
 
 function Bootstrap3ElementModifierFn($log) {
+  var customCss = [
+    '<style>' +
+    '.glyphicon-spin-jcs {' +
+    '-webkit-animation: spin 1000ms infinite linear;' +
+    'animation: spin 1000ms infinite linear;' +
+    '}' +
+    '@-webkit-keyframes spin {' +
+    '0% {' +
+    '-webkit-transform: rotate(0deg);' +
+    'transform: rotate(0deg);' +
+    '}' +
+    '100% {' +
+    '-webkit-transform: rotate(359deg);' +
+    'transform: rotate(359deg);' +
+    '}' +
+    '}' +
+    '@keyframes spin {' +
+    '0% {' +
+    '-webkit-transform: rotate(0deg);' +
+    'transform: rotate(0deg);' +
+    '}' +
+    '100% {' +
+    '-webkit-transform: rotate(359deg);' +
+    'transform: rotate(359deg);' +
+    '}' +
+    '}' +
+    '</style>'
+  ].join('');
+
+  angular.element(document.body).append(angular.element(customCss));
+
   var reset = function (el) {
       angular.forEach(el.find('span'), function (spanEl) {
         spanEl = angular.element(spanEl);
@@ -442,7 +503,7 @@ function Bootstrap3ElementModifierFn($log) {
           var iconElText = '<span class="glyphicon glyphicon-remove form-control-feedback"></span>';
           if (inputGroupEl.length > 0) {
             iconElText = iconElText.replace('form-', '');
-            iconElText = '<span class="input-group-addon control-feedback">' + iconElText + '</span';
+            iconElText = '<span class="input-group-addon control-feedback">' + iconElText + '</span>';
           }
 
           insertAfter(getCorrectElementToPlaceErrorElementAfter(el), angular.element(iconElText));
@@ -480,12 +541,35 @@ function Bootstrap3ElementModifierFn($log) {
       } else {
         $log.error('Angular-auto-validate: invalid bs3 form structure elements must be wrapped by a form-group class');
       }
+    },
+
+    waitForAsyncValidators = function (el) {
+      var frmGroupEl = findFormGroupElement(el),
+        inputGroupEl;
+
+      if (frmGroupEl) {
+        reset(frmGroupEl);
+        inputGroupEl = findInputGroupElement(frmGroupEl[0]);
+        frmGroupEl.addClass('has-feedback ' + (inputGroupEl.length > 0 || addValidationStateIcons === false ? '' : 'has-feedback'));
+        if (addValidationStateIcons) {
+          var iconElText = '<span class="glyphicon glyphicon-repeat glyphicon-spin-jcs form-control-feedback"></span>';
+          if (inputGroupEl.length > 0) {
+            iconElText = iconElText.replace('form-', '');
+            iconElText = '<span class="input-group-addon control-feedback">' + iconElText + '</span>';
+          }
+
+          insertAfter(el, angular.element(iconElText));
+        }
+      } else {
+        $log.error('Angular-auto-validate: invalid bs3 form structure elements must be wrapped by a form-group class');
+      }
     };
 
   return {
     makeValid: makeValid,
     makeInvalid: makeInvalid,
     makeDefault: makeDefault,
+    waitForAsyncValidators: waitForAsyncValidators,
     enableValidationStateIcons: enableValidationStateIcons,
     key: 'bs3'
   };
@@ -501,23 +585,24 @@ angular.module('jcs-autoValidate').factory('bootstrap3ElementModifier', Bootstra
  * Taken from https://github.com/angular/angular.js/issues/2690#issue-14462164 (with added tests of course!)
  */
 function JCSDebounceFn($timeout) {
-  var debounce = function (fn, timeout, apply) {
-    timeout = angular.isUndefined(timeout) ? 0 : timeout;
-    apply = angular.isUndefined(apply) ? true : apply; // !!default is true! most suitable to my experience
-    var nthCall = 0;
-    return function () { // intercepting fn
-      var that = this;
-      var argz = arguments;
-      nthCall += 1;
-      var later = (function (version) {
-        return function () {
-          if (version === nthCall) {
-            return fn.apply(that, argz);
-          }
-        };
-      })(nthCall);
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this;
+      var args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) {
+          func.apply(context, args);
+        }
+      };
 
-      return $timeout(later, timeout, apply);
+      var callNow = immediate && !timeout;
+      $timeout.cancel(timeout);
+      timeout = $timeout(later, wait, false);
+      if (callNow) {
+        func.apply(context, args);
+      }
     };
   };
 
@@ -830,7 +915,7 @@ function ElementUtilsFn() {
   };
 }
 
-function ValidationManagerFn(validator, elementUtils) {
+function ValidationManagerFn(validator, elementUtils, $anchorScroll) {
   var elementTypesToValidate = ['input', 'textarea', 'select', 'form'],
 
     elementIsVisible = function (el) {
@@ -922,18 +1007,23 @@ function ValidationManagerFn(validator, elementUtils) {
             modelCtrl.removeAllExternalValidation();
           }
 
-          if (isValid) {
-            validator.makeValid(el);
+          if (modelCtrl.$pending !== undefined && options.waitForAsyncValidators === true) {
+            // we have pending async validators
+            validator.waitForAsyncValidators(el);
           } else {
-            errorType = findErrorType(modelCtrl.$errors || modelCtrl.$error);
-            if (errorType === undefined) {
-              // we have a weird situation some users are encountering where a custom control
-              // is valid but the ngModel is report it isn't and thus no valid error type can be found
-              isValid = true;
+            if (isValid) {
+              validator.makeValid(el);
             } else {
-              validator.getErrorMessage(errorType, el).then(function (errorMsg) {
-                validator.makeInvalid(el, errorMsg);
-              });
+              errorType = findErrorType(modelCtrl.$errors || modelCtrl.$error);
+              if (errorType === undefined) {
+                // we have a weird situation some users are encountering where a custom control
+                // is valid but the ngModel is report it isn't and thus no valid error type can be found
+                isValid = true;
+              } else {
+                validator.getErrorMessage(errorType, el).then(function (errorMsg) {
+                  validator.makeInvalid(el, errorMsg);
+                });
+              }
             }
           }
         }
@@ -984,6 +1074,12 @@ function ValidationManagerFn(validator, elementUtils) {
               ctrlFormOptions.forceValidation = force;
               try {
                 isValid = validateElement(controller, ctrlElement, ctrlFormOptions);
+                if (validator.firstInvalidElementScrollingOnSubmitEnabled() && !isValid && frmValid) {
+                  var ctrlElementId = ctrlElement.attr('id');
+                  if (ctrlElementId) {
+                    $anchorScroll(ctrlElementId);
+                  }
+                }
                 frmValid = frmValid && isValid;
               } finally {
                 ctrlFormOptions.forceValidation = originalForceValue;
@@ -1045,7 +1141,8 @@ function ValidationManagerFn(validator, elementUtils) {
 
 ValidationManagerFn.$inject = [
   'validator',
-  'jcs-elementUtils'
+  'jcs-elementUtils',
+  '$anchorScroll'
 ];
 
 angular.module('jcs-autoValidate').factory('jcs-elementUtils', ElementUtilsFn);
@@ -1066,6 +1163,7 @@ function parseOptions(ctrl, validator, attrs) {
   opts.getFormController = function () {
     return ctrl;
   };
+  opts.waitForAsyncValidators = parseBooleanAttributeValue(attrs.waitForAsyncValidators, opts.waitForAsyncValidators);
   opts.forceValidation = false;
   opts.disabled = !validator.isEnabled() || parseBooleanAttributeValue(attrs.disableDynamicValidation, opts.disabled);
   opts.validateNonVisibleControls = parseBooleanAttributeValue(attrs.validateNonVisibleControls, opts.validateNonVisibleControls);
@@ -1296,7 +1394,10 @@ angular.module('jcs-autoValidate').config(['$provide',
               if (attrs.formnovalidate === undefined &&
                 (frmCtrl !== undefined && frmCtrl !== null && frmCtrl.autoValidateFormOptions &&
                   frmCtrl.autoValidateFormOptions.disabled === false)) {
-                if (!supportsNgModelOptions || ngModelOptions === undefined || ngModelOptions.updateOn === undefined || ngModelOptions.updateOn === '') {
+                // if the version of angular supports ng-model-options let angular handle the element.on bit
+                // fixes issue with async validators
+                if (supportsNgModelOptions ||
+                  (!supportsNgModelOptions || ngModelOptions === undefined || ngModelOptions.updateOn === undefined || ngModelOptions.updateOn === '')) {
                   ngModelCtrl.$setValidity = function (validationErrorKey, isValid) {
                     setValidity.call(ngModelCtrl, validationErrorKey, isValid);
                     setValidationState();

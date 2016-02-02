@@ -41,11 +41,10 @@ class UsersTask
 //
     /**
      *
-     * @ORM\ManyToOne(targetEntity="Users", inversedBy="usersTask")
-     * @ORM\JoinColumn(name="userTaskId", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Users", inversedBy="usersTasks")
      */
 
-    private $userTaskId;
+    private $user;
 
 
 //    end many-to-one
@@ -156,16 +155,16 @@ class UsersTask
     /**
      * @return mixed
      */
-    public function getUserTaskId()
+    public function getUser()
     {
-        return $this->userTaskId;
+        return $this->user;
     }
 
     /**
      * @param mixed $userTaskId
      */
-    public function setUserTaskId($userTaskId)
+    public function setUser($user)
     {
-        $this->userTaskId = $userTaskId;
+        $this->user = $user;
     }
 }

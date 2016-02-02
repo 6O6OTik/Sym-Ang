@@ -8,7 +8,7 @@ angular.module('prApp')
 
         service.Login=function(username, password, callback){
             $http.post('/auth/log', { username: username, password: password })
-                .success(function (response) {
+                .success(function (response ) {
                     callback(response);
                 })
                 .error(function (response) {
@@ -36,6 +36,8 @@ angular.module('prApp')
         };
         return service;
     }])
+
+
     .factory('Base64', function () {
         var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 

@@ -2,8 +2,8 @@
 
 angular.module('prApp')
     .controller('loginCtrl',
-    ['$scope','$rootScope','$location', 'loginService',
-    function ($scope,$rootScope, $location,loginService) {
+    ['$scope','$rootScope','$location', 'loginService','$cookieStore',
+    function ($scope,$rootScope, $location,loginService,$cookieStore) {
 
         loginService.ClearCredentials();
 
@@ -12,10 +12,9 @@ angular.module('prApp')
             loginService.Login($scope.username, $scope.password, function(response){
                 if(response.success){
                     loginService.SetCredentials($scope.username, $scope.password);
+                    $cookieStore.put('userObj', response);
+
                     $location.path('/user');
-                    console.log('sd');
-                    console.log($scope.username, $scope.password);
-                    console.log($scope)
                 } else {
                     $scope.error = response.message;
                     $scope.dataLoading = false;

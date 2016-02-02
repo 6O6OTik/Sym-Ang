@@ -9,7 +9,8 @@ angular
         'ngRoute',
         'ngSanitize',
         'ui.bootstrap',
-        'ngTouch'
+        'ngTouch',
+        'LocalStorageModule'
     ])
     .config(function ($routeProvider, $locationProvider)  {
 
@@ -46,19 +47,22 @@ angular
             requireBase: false
         });
         //$locationProvider.hashPrefix('!');
-    })
-    .run(['$rootScope', '$location', '$cookieStore', '$http',
-        function ($rootScope, $location, $cookieStore, $http) {
-                     $rootScope.window = $cookieStore.get('window') || {};
-            if ($rootScope.window.currentUser) {
-                $http.defaults.headers.common['prApp'] = 'Basic ' + $rootScope.window.currentUser.authdata;
-            }
+    });
+    //.config(['localStorageServiceProvider', function(localStorageServiceProvider){
+    //    localStorageServiceProvider.setPrefix('prApp');
+    //}]);
+    //.run(['$rootScope', '$location', '$cookieStore', '$http',
+    //    function ($rootScope, $location, $cookieStore, $http) {
+    //                 $rootScope.window = $cookieStore.get('window') || {};
+    //        if ($rootScope.window.currentUser) {
+    //            $http.defaults.headers.common['prApp'] = 'Basic ' + $rootScope.window.currentUser.authdata;
+    //        }
 
-            //$rootScope.$on('$locationChangeStart', function (event, next, current) {
-            //    // redirect to login page if not logged in
-            //    if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
-            //        $location.path('/login');
-            //    }
+    //        $rootScope.$on('$locationChangeStart', function (event, next, current) {
+    //             redirect to login page if not logged in
+                //if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+                //    $location.path('/login');
+                //}
             //});
-        }]);
+//     }]);
 

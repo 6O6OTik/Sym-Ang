@@ -27,7 +27,7 @@ body {
 .marketing,
 .footer {
     padding-left: 15px;
-    padding-right: 15px;
+    /*padding-right: 15px;*/
 
 }
 
@@ -244,3 +244,48 @@ small {
 /*.navbar-inverse {*/
     /*background-color: rgba(175, 72, 72, 0.71);*/
 /*}*/
+
+input[data-ng-change="RadioChange('normal')"]{
+    background-color: green;
+}
+
+.color-low {
+    color: #23329b;
+    font-weight: 600;
+}
+
+
+
+.color-normal {
+    color: #0fa910;
+    font-weight: 600;
+}
+.color-critical {
+    color: #ff171c;
+    font-weight: 600;
+}
+
+td button.taskSetting{
+    color: #fce7d0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
