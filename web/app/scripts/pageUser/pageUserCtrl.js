@@ -11,7 +11,12 @@ angular.module('prApp')
 
             $scope.logout = function(){
               $cookieStore.remove('userObj');
+                console.log('123');
+                //$location.path('/login');
+
             };
+
+
 
 
 
@@ -141,7 +146,7 @@ angular.module('prApp')
             $scope.item = item;
             //$scope.temp = {id: date.id, title: date.title, body: date.body, status: date.status};
 
-            $scope.EndViewTaskEnd = function (date, temp) {
+            $scope.EndViewTaskEnd = function () {
                 $modalInstance.close();
             };
             $scope.cancel = function () {
