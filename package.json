@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "todo",
+  "repository": "",
+  "license": "custom",
+  "devDependencies": {
+    "bower": "~1.7"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+  }
+}
